@@ -28,64 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
+            LNombre = new Label();
+            LDni = new Label();
+            LApellido = new Label();
+            LModificar = new Label();
+            LNyA = new Label();
             BGuardar = new Button();
             BEliminar = new Button();
+            TNombre = new TextBox();
+            TApellido = new TextBox();
+            TDni = new TextBox();
             SuspendLayout();
             // 
-            // label1
+            // LNombre
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(117, 129);
-            label1.Name = "label1";
-            label1.Size = new Size(51, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Nombre";
-            label1.Click += label1_Click;
+            LNombre.AutoSize = true;
+            LNombre.Location = new Point(117, 129);
+            LNombre.Name = "LNombre";
+            LNombre.Size = new Size(51, 15);
+            LNombre.TabIndex = 0;
+            LNombre.Text = "Nombre";
+            LNombre.Click += label1_Click;
             // 
-            // label2
+            // LDni
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(117, 92);
-            label2.Name = "label2";
-            label2.Size = new Size(27, 15);
-            label2.TabIndex = 1;
-            label2.Text = "DNI";
+            LDni.AutoSize = true;
+            LDni.Location = new Point(117, 92);
+            LDni.Name = "LDni";
+            LDni.Size = new Size(27, 15);
+            LDni.TabIndex = 1;
+            LDni.Text = "DNI";
             // 
-            // label3
+            // LApellido
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(117, 170);
-            label3.Name = "label3";
-            label3.Size = new Size(51, 15);
-            label3.TabIndex = 2;
-            label3.Text = "Apellido";
-            label3.Click += label3_Click;
+            LApellido.AutoSize = true;
+            LApellido.Location = new Point(117, 170);
+            LApellido.Name = "LApellido";
+            LApellido.Size = new Size(51, 15);
+            LApellido.TabIndex = 2;
+            LApellido.Text = "Apellido";
+            LApellido.Click += label3_Click;
             // 
-            // label4
+            // LModificar
             // 
-            label4.AutoSize = true;
-            label4.BackColor = SystemColors.Control;
-            label4.ForeColor = Color.Red;
-            label4.Location = new Point(259, 34);
-            label4.Name = "label4";
-            label4.Size = new Size(58, 15);
-            label4.TabIndex = 3;
-            label4.Text = "Modificar";
-            label4.Click += label4_Click;
+            LModificar.AutoSize = true;
+            LModificar.BackColor = SystemColors.Control;
+            LModificar.ForeColor = Color.Red;
+            LModificar.Location = new Point(259, 34);
+            LModificar.Name = "LModificar";
+            LModificar.Size = new Size(58, 15);
+            LModificar.TabIndex = 3;
+            LModificar.Text = "Modificar";
+            LModificar.Click += label4_Click;
             // 
-            // label5
+            // LNyA
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(117, 34);
-            label5.Name = "label5";
-            label5.Size = new Size(107, 15);
-            label5.TabIndex = 4;
-            label5.Text = "Nombre y Apellido";
+            LNyA.AutoSize = true;
+            LNyA.Location = new Point(117, 34);
+            LNyA.Name = "LNyA";
+            LNyA.Size = new Size(107, 15);
+            LNyA.TabIndex = 4;
+            LNyA.Text = "Nombre y Apellido";
             // 
             // BGuardar
             // 
@@ -105,18 +108,42 @@
             BEliminar.Text = "Eliminar";
             BEliminar.UseVisualStyleBackColor = true;
             // 
+            // TNombre
+            // 
+            TNombre.Location = new Point(217, 129);
+            TNombre.Name = "TNombre";
+            TNombre.Size = new Size(100, 23);
+            TNombre.TabIndex = 7;
+            // 
+            // TApellido
+            // 
+            TApellido.Location = new Point(217, 170);
+            TApellido.Name = "TApellido";
+            TApellido.Size = new Size(100, 23);
+            TApellido.TabIndex = 8;
+            // 
+            // TDni
+            // 
+            TDni.Location = new Point(217, 89);
+            TDni.Name = "TDni";
+            TDni.Size = new Size(100, 23);
+            TDni.TabIndex = 9;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(611, 311);
+            Controls.Add(TDni);
+            Controls.Add(TApellido);
+            Controls.Add(TNombre);
             Controls.Add(BEliminar);
             Controls.Add(BGuardar);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(LNyA);
+            Controls.Add(LModificar);
+            Controls.Add(LApellido);
+            Controls.Add(LDni);
+            Controls.Add(LNombre);
             Name = "Form1";
             Text = "Pequeño formulario";
             Load += Form1_Load;
@@ -126,12 +153,15 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
+        private Label LNombre;
+        private Label LDni;
+        private Label LApellido;
+        private Label LModificar;
+        private Label LNyA;
         private Button BGuardar;
         private Button BEliminar;
+        private TextBox TNombre;
+        private TextBox TApellido;
+        private TextBox TDni;
     }
 }
