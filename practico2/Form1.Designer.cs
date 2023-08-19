@@ -33,12 +33,14 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
+            BGuardar = new Button();
+            BEliminar = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(117, 52);
+            label1.Location = new Point(117, 129);
             label1.Name = "label1";
             label1.Size = new Size(51, 15);
             label1.TabIndex = 0;
@@ -48,7 +50,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(117, 26);
+            label2.Location = new Point(117, 92);
             label2.Name = "label2";
             label2.Size = new Size(27, 15);
             label2.TabIndex = 1;
@@ -57,7 +59,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(117, 95);
+            label3.Location = new Point(117, 170);
             label3.Name = "label3";
             label3.Size = new Size(51, 15);
             label3.TabIndex = 2;
@@ -69,7 +71,7 @@
             label4.AutoSize = true;
             label4.BackColor = SystemColors.Control;
             label4.ForeColor = Color.Red;
-            label4.Location = new Point(281, 130);
+            label4.Location = new Point(259, 34);
             label4.Name = "label4";
             label4.Size = new Size(58, 15);
             label4.TabIndex = 3;
@@ -79,17 +81,37 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(290, 43);
+            label5.Location = new Point(117, 34);
             label5.Name = "label5";
             label5.Size = new Size(107, 15);
             label5.TabIndex = 4;
             label5.Text = "Nombre y Apellido";
             // 
+            // BGuardar
+            // 
+            BGuardar.Location = new Point(117, 214);
+            BGuardar.Name = "BGuardar";
+            BGuardar.Size = new Size(75, 23);
+            BGuardar.TabIndex = 5;
+            BGuardar.Text = "Guardar";
+            BGuardar.UseVisualStyleBackColor = true;
+            // 
+            // BEliminar
+            // 
+            BEliminar.Location = new Point(242, 214);
+            BEliminar.Name = "BEliminar";
+            BEliminar.Size = new Size(75, 23);
+            BEliminar.TabIndex = 6;
+            BEliminar.Text = "Eliminar";
+            BEliminar.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(611, 275);
+            ClientSize = new Size(611, 311);
+            Controls.Add(BEliminar);
+            Controls.Add(BGuardar);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -109,5 +131,7 @@
         private Label label3;
         private Label label4;
         private Label label5;
+        private Button BGuardar;
+        private Button BEliminar;
     }
 }
