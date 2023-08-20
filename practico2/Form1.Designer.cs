@@ -115,6 +115,7 @@
             TNombre.Name = "TNombre";
             TNombre.Size = new Size(100, 23);
             TNombre.TabIndex = 7;
+            TNombre.KeyPress += validacionNombre;
             // 
             // TApellido
             // 
@@ -122,6 +123,7 @@
             TApellido.Name = "TApellido";
             TApellido.Size = new Size(100, 23);
             TApellido.TabIndex = 8;
+            TApellido.KeyPress += validacionApellido;
             // 
             // TDni
             // 
@@ -129,6 +131,7 @@
             TDni.Name = "TDni";
             TDni.Size = new Size(100, 23);
             TDni.TabIndex = 9;
+            TDni.KeyPress += validacion;
             // 
             // Form1
             // 

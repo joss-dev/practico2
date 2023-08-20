@@ -39,18 +39,42 @@ namespace practico2
             bool vacio = false;
             foreach (Control c in this.Controls)
             {
-                if(c is TextBox)
+                if (c is TextBox)
                 {
-                    if(c.Text == string.Empty)
+                    if (c.Text == string.Empty)
                     {
                         vacio = true;
                         break;
                     }
                 }
             }
-            if(vacio)
+            if (vacio)
             {
                 Interaction.MsgBox("Debe completar todos los campos", MsgBoxStyle.Critical, "error");
+            }
+        }
+
+        private void validacion(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void validacionNombre(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void validacionApellido(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true;
             }
         }
     }
