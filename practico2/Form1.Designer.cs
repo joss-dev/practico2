@@ -98,6 +98,7 @@
             BGuardar.TabIndex = 5;
             BGuardar.Text = "Guardar";
             BGuardar.UseVisualStyleBackColor = true;
+            BGuardar.Click += BGuardar_Click;
             // 
             // BEliminar
             // 
