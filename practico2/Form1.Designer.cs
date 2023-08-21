@@ -49,8 +49,8 @@
             LTelefono = new Label();
             RVaron = new RadioButton();
             RMujer = new RadioButton();
-            pictureBox1 = new PictureBox();
             label2 = new Label();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -268,16 +268,7 @@
             RMujer.TabIndex = 14;
             RMujer.Text = "Mujer";
             RMujer.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(396, 108);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(97, 113);
-            pictureBox1.TabIndex = 15;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click_1;
+            RMujer.CheckedChanged += SeleccionaMujer;
             // 
             // label2
             // 
@@ -290,13 +281,22 @@
             label2.TabIndex = 16;
             label2.Text = "Nuevo Cliente";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.hombre;
+            pictureBox1.Location = new Point(377, 99);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(144, 146);
+            pictureBox1.TabIndex = 17;
+            pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(611, 596);
-            Controls.Add(label2);
             Controls.Add(pictureBox1);
+            Controls.Add(label2);
             Controls.Add(RMujer);
             Controls.Add(RVaron);
             Controls.Add(panel1);
@@ -335,7 +335,7 @@
         private CheckBox CMastercard;
         private RadioButton RVaron;
         private RadioButton RMujer;
-        private PictureBox pictureBox1;
         private Label label2;
+        private PictureBox pictureBox1;
     }
 }

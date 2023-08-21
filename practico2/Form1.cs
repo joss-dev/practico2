@@ -139,5 +139,10 @@ namespace practico2
         {
 
         }
+
+        private void SeleccionaMujer(object sender, EventArgs e)
+        {
+            pictureBox1.BackgroundImage = Properties.Resources.mujer;
+        }
     }
 }
