@@ -1,5 +1,4 @@
 using Microsoft.VisualBasic;
-using System.Net;
 
 namespace practico2
 {
@@ -106,13 +105,9 @@ namespace practico2
                     TDni.Clear();
                     TNombre.Clear();
                     TApellido.Clear();
+                    TTelefono.Clear();
                 }
             }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -130,19 +125,27 @@ namespace practico2
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void SeleccionaMujer(object sender, EventArgs e)
         {
             pictureBox1.BackgroundImage = Properties.Resources.mujer;
+        }
+
+        private void seleccionaHombre(object sender, EventArgs e)
+        {
+            pictureBox1.BackgroundImage = Properties.Resources.hombre;
+        }
+
+        private void TTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void validacionTelefono(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

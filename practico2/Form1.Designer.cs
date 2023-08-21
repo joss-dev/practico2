@@ -237,6 +237,8 @@
             TTelefono.Name = "TTelefono";
             TTelefono.Size = new Size(100, 23);
             TTelefono.TabIndex = 11;
+            TTelefono.TextChanged += TTelefono_TextChanged;
+            TTelefono.KeyPress += validacionTelefono;
             // 
             // LTelefono
             // 
@@ -258,6 +260,7 @@
             RVaron.TabStop = true;
             RVaron.Text = "Varon";
             RVaron.UseVisualStyleBackColor = true;
+            RVaron.CheckedChanged += seleccionaHombre;
             // 
             // RMujer
             // 
@@ -303,6 +306,7 @@
             Controls.Add(BSalir);
             Controls.Add(BEliminar);
             Controls.Add(BGuardar);
+            IsMdiContainer = true;
             Name = "Form1";
             Text = "Pequeño formulario";
             Load += Form1_Load;
