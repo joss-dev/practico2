@@ -108,6 +108,7 @@
             BEliminar.TabIndex = 6;
             BEliminar.Text = "Eliminar";
             BEliminar.UseVisualStyleBackColor = true;
+            BEliminar.Click += BEliminar_Click;
             // 
             // TNombre
             // 

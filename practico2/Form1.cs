@@ -30,12 +30,8 @@ namespace practico2
 
         }
 
-        private void BGuardar_Click(object sender, EventArgs e)
+        private bool ValidacionTextBoxs()
         {
-
-            LModificar.Text = TApellido.Text + " " + TNombre.Text;
-
-
             bool vacio = false;
             foreach (Control c in this.Controls)
             {
@@ -48,21 +44,26 @@ namespace practico2
                     }
                 }
             }
-            if (vacio)
+            return vacio;
+        }
+
+        private void BGuardar_Click(object sender, EventArgs e)
+        {
+
+            LModificar.Text = TApellido.Text + " " + TNombre.Text;
+
+            if (ValidacionTextBoxs())
             {
                 Interaction.MsgBox("Debe completar todos los campos", MsgBoxStyle.Critical, "error");
-            }else
+            }
+            else
             {
                 MsgBoxResult ask = Interaction.MsgBox("Seguro desea ingresar un nuevo cliente?", MsgBoxStyle.YesNo, "Confirmacion de insersion");
                 if (ask == MsgBoxResult.Yes)
                 {
                     Interaction.MsgBox("El cliente " + LModificar.Text + " se inserto correctamente", MsgBoxStyle.Information, "Guardar");
                 }
-                else
-                {
-                    
-                }
-            } 
+            }
         }
 
         private void validacion(object sender, KeyPressEventArgs e)
@@ -86,6 +87,24 @@ namespace practico2
             if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
             {
                 e.Handled = true;
+            }
+        }
+
+        private void BEliminar_Click(object sender, EventArgs e)
+        {
+            if(ValidacionTextBoxs())
+            {
+                Interaction.MsgBox("Debe completar todos los campos", MsgBoxStyle.Critical, "error");
+            }
+            else
+            {
+                MsgBoxResult result = Interaction.MsgBox("Estas a punto de eliminar el cliente: " + TApellido.Text + " " + TNombre.Text, MsgBoxStyle.YesNo, "Confirmacion de eliminacion");
+                if (result == MsgBoxResult.Yes)
+                {
+                    TDni.Clear();
+                    TNombre.Clear();
+                    TApellido.Clear();
+                }
             }
         }
     }
