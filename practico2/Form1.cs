@@ -33,7 +33,7 @@ namespace practico2
         private bool ValidacionTextBoxs()
         {
             bool vacio = false;
-            foreach (Control c in this.Controls)
+            foreach (Control c in panel1.Controls)
             {
                 if (c is TextBox)
                 {
@@ -92,7 +92,7 @@ namespace practico2
 
         private void BEliminar_Click(object sender, EventArgs e)
         {
-            if(ValidacionTextBoxs())
+            if (ValidacionTextBoxs())
             {
                 Interaction.MsgBox("Debe completar todos los campos", MsgBoxStyle.Critical, "error");
             }
@@ -108,6 +108,21 @@ namespace practico2
                     TApellido.Clear();
                 }
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void TDni_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
