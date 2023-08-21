@@ -101,6 +101,8 @@ namespace practico2
                 MsgBoxResult result = Interaction.MsgBox("Estas a punto de eliminar el cliente: " + TApellido.Text + " " + TNombre.Text, MsgBoxStyle.YesNo, "Confirmacion de eliminacion");
                 if (result == MsgBoxResult.Yes)
                 {
+                    LModificar.Text = "Modificar";
+                    Interaction.MsgBox("El cliente: " + TApellido.Text + " " + TNombre.Text + " se elimino correctamente", MsgBoxStyle.Information, "Eliminacion");
                     TDni.Clear();
                     TNombre.Clear();
                     TApellido.Clear();
