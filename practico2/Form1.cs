@@ -51,7 +51,18 @@ namespace practico2
             if (vacio)
             {
                 Interaction.MsgBox("Debe completar todos los campos", MsgBoxStyle.Critical, "error");
-            }
+            }else
+            {
+                MsgBoxResult ask = Interaction.MsgBox("Seguro desea ingresar un nuevo cliente?", MsgBoxStyle.YesNo, "Confirmacion de insersion");
+                if (ask == MsgBoxResult.Yes)
+                {
+                    Interaction.MsgBox("El cliente " + LModificar.Text + " se inserto correctamente", MsgBoxStyle.Information, "Guardar");
+                }
+                else
+                {
+                    
+                }
+            } 
         }
 
         private void validacion(object sender, KeyPressEventArgs e)
