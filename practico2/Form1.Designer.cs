@@ -306,6 +306,7 @@
             Controls.Add(BSalir);
             Controls.Add(BEliminar);
             Controls.Add(BGuardar);
+            KeyPreview = true;
             Name = "Form1";
             Text = "Pequeño formulario";
             Load += Form1_Load;

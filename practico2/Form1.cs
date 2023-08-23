@@ -9,10 +9,7 @@ namespace practico2
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -97,7 +94,7 @@ namespace practico2
             }
             else
             {
-                MsgBoxResult result = Interaction.MsgBox("Estas a punto de eliminar el cliente: " + TApellido.Text + " " + TNombre.Text, MsgBoxStyle.YesNo, "Confirmacion de eliminacion");
+                MsgBoxResult result = (MsgBoxResult)MessageBox.Show("Estas a punto de eliminar el cliente: " + TApellido.Text + " " + TNombre.Text, "Eliminacion", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
                 if (result == MsgBoxResult.Yes)
                 {
                     LModificar.Text = "Modificar";
@@ -145,6 +142,19 @@ namespace practico2
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.KeyDown += new KeyEventHandler(cerrar);
+        }
+
+        void cerrar(object sender, KeyEventArgs e)
+        {
+            if(e.Control && e.KeyCode == Keys.S)
+            {
+                Application.Exit();
             }
         }
     }
