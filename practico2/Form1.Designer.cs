@@ -63,7 +63,7 @@
             LNombre.Size = new Size(59, 15);
             LNombre.TabIndex = 0;
             LNombre.Text = "* Nombre";
-            LNombre.Click += label1_Click;
+        
             // 
             // LDni
             // 
@@ -82,7 +82,7 @@
             LApellido.Size = new Size(59, 15);
             LApellido.TabIndex = 2;
             LApellido.Text = "* Apellido";
-            LApellido.Click += label3_Click;
+       
             // 
             // LModificar
             // 
@@ -94,7 +94,7 @@
             LModificar.Size = new Size(58, 15);
             LModificar.TabIndex = 3;
             LModificar.Text = "Modificar";
-            LModificar.Click += label4_Click;
+        
             // 
             // LNyA
             // 
@@ -153,7 +153,6 @@
             TDni.Name = "TDni";
             TDni.Size = new Size(100, 23);
             TDni.TabIndex = 9;
-            TDni.TextChanged += TDni_TextChanged;
             TDni.KeyPress += validacion;
             // 
             // BSalir
@@ -229,7 +228,7 @@
             label1.Size = new Size(108, 15);
             label1.TabIndex = 12;
             label1.Text = "Tarjetas de credito: ";
-            label1.Click += label1_Click_1;
+
             // 
             // TTelefono
             // 
@@ -237,7 +236,6 @@
             TTelefono.Name = "TTelefono";
             TTelefono.Size = new Size(100, 23);
             TTelefono.TabIndex = 11;
-            TTelefono.TextChanged += TTelefono_TextChanged;
             TTelefono.KeyPress += validacionTelefono;
             // 
             // LTelefono

@@ -9,23 +9,6 @@ namespace practico2
             InitializeComponent();
         }
 
-       
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private bool ValidacionTextBoxs()
         {
             bool vacio = false;
@@ -112,15 +95,6 @@ namespace practico2
             Application.Exit();
         }
 
-        private void TDni_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void SeleccionaMujer(object sender, EventArgs e)
         {
@@ -130,11 +104,6 @@ namespace practico2
         private void seleccionaHombre(object sender, EventArgs e)
         {
             pictureBox1.BackgroundImage = Properties.Resources.hombre;
-        }
-
-        private void TTelefono_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void validacionTelefono(object sender, KeyPressEventArgs e)
