@@ -33,14 +33,15 @@ namespace practico2
 
             if (ValidacionTextBoxs())
             {
-                Interaction.MsgBox("Debe completar todos los campos", MsgBoxStyle.Critical, "error");
+                MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MsgBoxResult ask = Interaction.MsgBox("Seguro desea ingresar un nuevo cliente?", MsgBoxStyle.YesNo, "Confirmacion de insersion");
+                
+                MsgBoxResult ask = (MsgBoxResult) MessageBox.Show("Seguro desea ingresar un nuevo cliente?", "Confirmacion de insersion", MessageBoxButtons.YesNo);
                 if (ask == MsgBoxResult.Yes)
                 {
-                    Interaction.MsgBox("El cliente " + LModificar.Text + " se inserto correctamente", MsgBoxStyle.Information, "Guardar");
+                    MessageBox.Show("El cliente " + LModificar.Text + " se inserto correctamente","Guardar" ,MessageBoxButtons.OK);
                 }
             }
         }
@@ -73,7 +74,7 @@ namespace practico2
         {
             if (ValidacionTextBoxs())
             {
-                Interaction.MsgBox("Debe completar todos los campos", MsgBoxStyle.Critical, "error");
+                MessageBox.Show("Debe completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
