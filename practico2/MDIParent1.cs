@@ -17,6 +17,9 @@ namespace practico2
         public MDIParent1()
         {
             InitializeComponent();
+            Form1 form1 = new Form1();
+            form1.MdiParent = this;
+            form1.Show();
         }
 
         private void ShowNewForm(object sender, EventArgs e)
